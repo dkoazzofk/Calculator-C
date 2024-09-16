@@ -42,10 +42,11 @@ int multiplication() {
 
 int main() {
   int choose, result;
-  for (int i = 0; i < 3; i++) {
+  for (;;) {
     printf("----Calculator----\n");
     printf("Whitch action do you want to choose?\n");
-    printf("1 - +\n2 -\"-\"\n3 - /\n4 - *");
+    printf("1 - +\n2 -\"-\"\n3 - /\n4 - *\n5 - exit\n");
+    printf("Put a number: ");
     scanf("%d", &choose);
     switch (choose) {
       case 1:
@@ -60,11 +61,15 @@ int main() {
       case 4:
         result = multiplication();
         break;
+      case 5:
+        return 0;
+        break;
 
       default:
         break;
     }
     printf("Result: %d", result);
+    printf("\n");
   }
   return 0;
 }
