@@ -42,27 +42,29 @@ int multiplication() {
 
 int main() {
   int choose, result;
-  printf("----Calculator----\n");
-  printf("Whitch action do you want to choose?\n");
-  printf("1 - +\n2 -\"-\"\n3 - /\n4 - *");
-  scanf("%d", &choose);
-  switch (choose) {
-    case 1:
-      result = addition();
-      break;
-    case 2:
-      result = substruction();
-      break;
-    case 3:
-      result = division();
-      break;
-    case 4:
-      result = multiplication();
-      break;
+  for (int i = 0; i < 3; i++) {
+    printf("----Calculator----\n");
+    printf("Whitch action do you want to choose?\n");
+    printf("1 - +\n2 -\"-\"\n3 - /\n4 - *");
+    scanf("%d", &choose);
+    switch (choose) {
+      case 1:
+        result = addition();
+        break;
+      case 2:
+        result = substruction();
+        break;
+      case 3:
+        result = division();
+        break;
+      case 4:
+        result = multiplication();
+        break;
 
-    default:
-      break;
+      default:
+        break;
+    }
+    printf("Result: %d", result);
   }
-  printf("Result: %d", result);
   return 0;
 }
